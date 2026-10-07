@@ -17,7 +17,7 @@
 			"buildsystem": "simple",
 			"only-arches": [
 				"x86_64",
-				"arm64"
+				"aarch64"
 			],
 			"build-commands": [
 				"git lfs pull",
@@ -25,14 +25,15 @@
 				"cp bin/chuckle-express-demo.$FLATPAK_ARCH $FLATPAK_DEST/usr/bin/chuckle-express",
 				"ln -s usr/bin/ $FLATPAK_DEST/bin",
 				"mkdir -p $FLATPAK_DEST/usr/share",
-				"cp -r share $FLATPAK_DEST/usr/"
+				"cp -r share $FLATPAK_DEST/usr/",
+				"ln -s usr/share/ $FLATPAK_DEST/share"
 			],
 			"sources": [
 				{
 					"type": "git",
 					"url": "https://github.com/TheJackiMonster/chuckle-express.git",
-					"tag": "v1.0.0-fix-appstream",
-					"commit": "e5ca8d934c0498a46526bff1b8308213d480180b"
+					"tag": "v1.0.0-fix-license",
+					"commit": "304d0c9f6d659b075f4be06ffa0127d5976764c1"
 				}
 			]
 		}
