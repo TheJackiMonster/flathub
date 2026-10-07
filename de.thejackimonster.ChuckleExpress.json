@@ -15,10 +15,6 @@
 		{
 			"name": "chuckle-express",
 			"buildsystem": "simple",
-			"only-arches": [
-				"x86_64",
-				"aarch64"
-			],
 			"build-commands": [
 				"git lfs pull",
 				"mkdir -p $FLATPAK_DEST/usr/bin",
