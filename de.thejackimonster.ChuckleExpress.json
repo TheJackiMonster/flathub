@@ -1,0 +1,40 @@
+{
+	"app-id": "de.thejackimonster.ChuckleExpress",
+	"runtime": "org.freedesktop.Platform",
+	"runtime-version": "26.08",
+	"sdk": "org.freedesktop.Sdk",
+	"command": "chuckle-express",
+	"finish-args": [
+		"--device=dri",
+		"--socket=wayland",
+        "--socket=fallback-x11",
+		"--share=ipc",
+		"--socket=pulseaudio"
+	],
+	"modules": [
+		{
+			"name": "chuckle-express",
+			"buildsystem": "simple",
+			"only-arches": [
+				"x86_64",
+				"arm64"
+			],
+			"build-commands": [
+				"git lfs pull",
+				"mkdir -p $FLATPAK_DEST/usr/bin",
+				"cp bin/chuckle-express-demo.$FLATPAK_ARCH $FLATPAK_DEST/usr/bin/chuckle-express",
+				"ln -s usr/bin/ $FLATPAK_DEST/bin",
+				"mkdir -p $FLATPAK_DEST/usr/share",
+				"cp -r share $FLATPAK_DEST/usr/"
+			],
+			"sources": [
+				{
+					"type": "git",
+					"url": "https://github.com/TheJackiMonster/chuckle-express.git",
+					"tag": "v1.0.0-fix-appstream",
+					"commit": "e5ca8d934c0498a46526bff1b8308213d480180b"
+				}
+			]
+		}
+	]
+}
