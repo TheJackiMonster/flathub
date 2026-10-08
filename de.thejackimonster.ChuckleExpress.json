@@ -28,8 +28,8 @@
 				{
 					"type": "git",
 					"url": "https://github.com/TheJackiMonster/chuckle-express.git",
-					"tag": "v1.0.0-fix-license",
-					"commit": "304d0c9f6d659b075f4be06ffa0127d5976764c1"
+					"tag": "v1.0.1",
+					"commit": "c2fce0c0094b0cb7922e02f9f92a5f4be86a1b7e"
 				}
 			]
 		}
