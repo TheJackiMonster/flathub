@@ -17,12 +17,10 @@
 			"buildsystem": "simple",
 			"build-commands": [
 				"git lfs pull",
-				"mkdir -p $FLATPAK_DEST/usr/bin",
-				"cp bin/chuckle-express-demo.$FLATPAK_ARCH $FLATPAK_DEST/usr/bin/chuckle-express",
-				"ln -s usr/bin/ $FLATPAK_DEST/bin",
-				"mkdir -p $FLATPAK_DEST/usr/share",
-				"cp -r share $FLATPAK_DEST/usr/",
-				"ln -s usr/share/ $FLATPAK_DEST/share"
+				"mkdir -p $FLATPAK_DEST/bin",
+				"cp bin/chuckle-express-demo.$FLATPAK_ARCH $FLATPAK_DEST/bin/chuckle-express",
+				"mkdir -p $FLATPAK_DEST/share",
+				"cp -r share $FLATPAK_DEST/"
 			],
 			"sources": [
 				{
